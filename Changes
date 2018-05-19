@@ -1,6 +1,8 @@
 Revision history for P5chdir
 
 {{$NEXT}}
+
+0.0.3  2018-05-20T00:14:09+02:00
     - Added original Perl 5 documentation
 
 0.0.2  2018-04-26T13:27:43+02:00
