@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5chdir:ver<0.0.2>:auth<cpan:ELIZABETH>;
+unit module P5chdir:ver<0.0.3>:auth<cpan:ELIZABETH>;
 
 proto sub chdir(|) is export {*}
 multi sub chdir(--> Bool:D) {
@@ -37,6 +37,22 @@ P5chdir - Implement Perl 5's chdir() built-in
 
   say "switched" if chdir("lib");
 
+=head2 ORIGINAL PERL 5 DOCUMENTATION
+
+    chdir EXPR
+    chdir FILEHANDLE
+    chdir DIRHANDLE
+    chdir   Changes the working directory to EXPR, if possible. If EXPR is
+            omitted, changes to the directory specified by $ENV{HOME}, if set;
+            if not, changes to the directory specified by $ENV{LOGDIR}. (Under
+            VMS, the variable $ENV{SYS$LOGIN} is also checked, and used if it
+            is set.) If neither is set, "chdir" does nothing. It returns true
+            on success, false otherwise. See the example under "die".
+
+            On systems that support fchdir(2), you may pass a filehandle or
+            directory handle as the argument. On systems that don't support
+            fchdir(2), passing handles raises an exception.
+
 =head2 PORTING CAVEATS
 
 In Perl 6, C<chdir> only changes the C<$*CWD> dynamic variable.  It does
@@ -48,8 +64,8 @@ dynamic variable, which can be lexically scoped, and thus can be thread-safe.
 
 =head1 DESCRIPTION
 
-This module tries to mimic the behaviour of the C<chdir> of Perl 5 as closely
-as possible.
+This module tries to mimic the behaviour of the C<chdir> function of Perl 5
+as closely as possible.
 
 =head1 AUTHOR
 

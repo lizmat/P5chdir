@@ -1,9 +1,10 @@
 Revision history for P5chdir
 
 {{$NEXT}}
+    - Added original Perl 5 documentation
 
 0.0.2  2018-04-26T13:27:43+02:00
-    - added PORTING CAVEATS section
+    - Added PORTING CAVEATS section
 
 0.0.1  2018-04-25T23:15:13+02:00
     - Initial version

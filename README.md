@@ -14,6 +14,23 @@ SYNOPSIS
 
     say "switched" if chdir("lib");
 
+ORIGINAL PERL 5 DOCUMENTATION
+-----------------------------
+
+    chdir EXPR
+    chdir FILEHANDLE
+    chdir DIRHANDLE
+    chdir   Changes the working directory to EXPR, if possible. If EXPR is
+            omitted, changes to the directory specified by $ENV{HOME}, if set;
+            if not, changes to the directory specified by $ENV{LOGDIR}. (Under
+            VMS, the variable $ENV{SYS$LOGIN} is also checked, and used if it
+            is set.) If neither is set, "chdir" does nothing. It returns true
+            on success, false otherwise. See the example under "die".
+
+            On systems that support fchdir(2), you may pass a filehandle or
+            directory handle as the argument. On systems that don't support
+            fchdir(2), passing handles raises an exception.
+
 PORTING CAVEATS
 ---------------
 
@@ -22,7 +39,7 @@ In Perl 6, `chdir` only changes the `$*CWD` dynamic variable. It does **not** ac
 DESCRIPTION
 ===========
 
-This module tries to mimic the behaviour of the `chdir` of Perl 5 as closely as possible.
+This module tries to mimic the behaviour of the `chdir` function of Perl 5 as closely as possible.
 
 AUTHOR
 ======
