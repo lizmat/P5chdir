@@ -11,11 +11,11 @@ my $logdir  = ~$basedir.child("lib");
 %*ENV<HOME>   = $home;
 %*ENV<LOGDIR> = $logdir;
 
-is chdir, True, 'did a bare chdir() to HOME work';
+is chdir, True, "did a bare chdir() to HOME work: { %*ENV<HOME> // "''" }";
 is ~$*CWD, $home, 'did it actually go to the right directory';
 
 %*ENV<HOME>:delete;
-is chdir, True, 'did a bare chdir() to LOGDIR work';
+is chdir, True, "did a bare chdir() to LOGDIR work: { %*ENV<LOGDIR> // "''" }";
 is ~$*CWD, $logdir, 'did it actually go to the right directory';
 
 %*ENV<LOGDIR>:delete;

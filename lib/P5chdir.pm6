@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5chdir:ver<0.0.3>:auth<cpan:ELIZABETH>;
+unit module P5chdir:ver<0.0.4>:auth<cpan:ELIZABETH>;
 
 proto sub chdir(|) is export {*}
 multi sub chdir(--> Bool:D) {
