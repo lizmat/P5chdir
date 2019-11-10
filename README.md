@@ -1,9 +1,7 @@
-[![Build Status](https://travis-ci.org/lizmat/P5chdir.svg?branch=master)](https://travis-ci.org/lizmat/P5chdir)
-
 NAME
 ====
 
-P5chdir - Implement Perl 5's chdir() built-in
+P5chdir - Implement Perl's chdir() built-in
 
 SYNOPSIS
 ========
@@ -34,12 +32,12 @@ ORIGINAL PERL 5 DOCUMENTATION
 PORTING CAVEATS
 ---------------
 
-In Perl 6, `chdir` only changes the `$*CWD` dynamic variable. It does **not** actually change the default directory from the OS's point of view. This is done this way, because there is no concept of a "default directory per OS thread". And since Perl 6 does not fork, but only does threading, it was felt that the "current directory" concept should be in the `$*CWD` dynamic variable, which can be lexically scoped, and thus can be thread-safe.
+In raku, `chdir` only changes the `$*CWD` dynamic variable. It does **not** actually change the default directory from the OS's point of view. This is done this way, because there is no concept of a "default directory per OS thread". And since Raku does not fork, but only does threading, it was felt that the "current directory" concept should be in the `$*CWD` dynamic variable, which can be lexically scoped, and thus can be thread-safe.
 
 DESCRIPTION
 ===========
 
-This module tries to mimic the behaviour of the `chdir` function of Perl 5 as closely as possible.
+This module tries to mimic the behaviour of the `chdir` function of Perl as closely as possible.
 
 AUTHOR
 ======
@@ -51,9 +49,9 @@ Source can be located at: https://github.com/lizmat/P5chdir . Comments and Pull 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

@@ -2,6 +2,9 @@ Revision history for P5chdir
 
 {{$NEXT}}
 
+0.0.6  2019-11-10T13:47:58+01:00
+    - changed Perl 6 to Raku, and Perl 5 Perl
+
 0.0.5  2018-05-31T10:08:01+02:00
     - Add file to bin dir so we are sure it will exist during testing
 
