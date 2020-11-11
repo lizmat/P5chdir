@@ -1,6 +1,6 @@
-use v6.c;
+use v6.*;
 
-unit module P5chdir:ver<0.0.6>:auth<cpan:ELIZABETH>;
+unit module P5chdir:ver<0.0.7>:auth<cpan:ELIZABETH>;
 
 proto sub chdir(|) is export {*}
 multi sub chdir(--> Bool:D) {
@@ -27,7 +27,7 @@ multi sub chdir(Str() $s --> Bool:D) {
 
 =head1 NAME
 
-P5chdir - Implement Perl's chdir() built-in
+Raku port of Perl's chdir() built-in
 
 =head1 SYNOPSIS
 
@@ -76,7 +76,7 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2019 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
