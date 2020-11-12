@@ -2,6 +2,9 @@ Revision history for P5chdir
 
 {{$NEXT}}
 
+0.0.8  2020-11-12T12:43:08+01:00
+    - Change name of distribution in META info
+
 0.0.7  2020-11-11T17:59:26+01:00
     - Change name of distribution
     - Force to highest possible Raku version

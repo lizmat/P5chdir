@@ -25,4 +25,4 @@ is ~$*CWD, $logdir, 'are we still at the right directory';
 is chdir('..'), True, 'did a specific chdir work';
 is ~$*CWD, ~$basedir, 'did we wind up in the right directory';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

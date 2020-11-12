@@ -1,6 +1,6 @@
 use v6.*;
 
-unit module P5chdir:ver<0.0.7>:auth<cpan:ELIZABETH>;
+unit module P5chdir:ver<0.0.8>:auth<cpan:ELIZABETH>;
 
 proto sub chdir(|) is export {*}
 multi sub chdir(--> Bool:D) {
@@ -84,4 +84,4 @@ This library is free software; you can redistribute it and/or modify it under th
 
 =end pod
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

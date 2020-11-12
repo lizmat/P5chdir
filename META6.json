@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "Implement Perl's chdir() built-in",
+  "description": "Raku port of Perl's chdir() built-in",
   "license": "Artistic-2.0",
   "name": "P5chdir",
   "perl": "6.c",
@@ -23,5 +23,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
