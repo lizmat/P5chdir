@@ -2,6 +2,12 @@ Revision history for P5chdir
 
 {{$NEXT}}
 
+0.0.9  2021-09-09T11:14:46+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+    - Update copyright year
+
 0.0.8  2020-11-12T12:43:08+01:00
     - Change name of distribution in META info
 

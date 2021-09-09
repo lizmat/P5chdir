@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/lizmat/P5chdir/workflows/test/badge.svg)](https://github.com/lizmat/P5chdir/actions)
+
 NAME
 ====
 
@@ -11,6 +13,11 @@ SYNOPSIS
     say "switched" if chdir; # switched to HOME or LOGDIR
 
     say "switched" if chdir("lib");
+
+DESCRIPTION
+===========
+
+This module tries to mimic the behaviour of Perl's `chdir` built-in as closely as possible in the Raku Programming Language.
 
 ORIGINAL PERL 5 DOCUMENTATION
 -----------------------------
@@ -34,22 +41,17 @@ PORTING CAVEATS
 
 In raku, `chdir` only changes the `$*CWD` dynamic variable. It does **not** actually change the default directory from the OS's point of view. This is done this way, because there is no concept of a "default directory per OS thread". And since Raku does not fork, but only does threading, it was felt that the "current directory" concept should be in the `$*CWD` dynamic variable, which can be lexically scoped, and thus can be thread-safe.
 
-DESCRIPTION
-===========
-
-This module tries to mimic the behaviour of the `chdir` function of Perl as closely as possible.
-
 AUTHOR
 ======
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/P5chdir . Comments and Pull Requests are welcome.
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018-2020 Elizabeth Mattijsen
+Copyright 2018, 2019, 2020, 2021 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 

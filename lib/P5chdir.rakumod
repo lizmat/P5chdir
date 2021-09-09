@@ -1,6 +1,6 @@
 use v6.*;
 
-unit module P5chdir:ver<0.0.8>:auth<cpan:ELIZABETH>;
+unit module P5chdir:ver<0.0.9>:auth<zef:lizmat>;
 
 proto sub chdir(|) is export {*}
 multi sub chdir(--> Bool:D) {
@@ -37,6 +37,11 @@ Raku port of Perl's chdir() built-in
 
   say "switched" if chdir("lib");
 
+=head1 DESCRIPTION
+
+This module tries to mimic the behaviour of Perl's C<chdir> built-in
+as closely as possible in the Raku Programming Language.
+
 =head2 ORIGINAL PERL 5 DOCUMENTATION
 
     chdir EXPR
@@ -62,21 +67,16 @@ per OS thread".  And since Raku does not fork, but only does threading,
 it was felt that the "current directory" concept should be in the C<$*CWD>
 dynamic variable, which can be lexically scoped, and thus can be thread-safe.
 
-=head1 DESCRIPTION
-
-This module tries to mimic the behaviour of the C<chdir> function of Perl
-as closely as possible.
-
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/P5chdir . Comments and
 Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2020 Elizabeth Mattijsen
+Copyright 2018, 2019, 2020, 2021 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
